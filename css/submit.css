@@ -1,0 +1,15 @@
+#submitButton{
+  justify-self:center;
+  margin-top: 10px;
+  background-color: #000;
+  color: #f4623a;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius:40px;
+  border: 2px solid #f4623a;
+  font-size: 110%;
+
+}
+
+

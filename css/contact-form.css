@@ -1,0 +1,23 @@
+.contact-form{
+    background-color: #000;
+    color: #fff;
+}
+
+h2{
+    color: #f4623a;
+}
+
+
+.form-group{
+    margin-top: 10px;
+}
+
+label{
+    margin-bottom: 3px;
+}
+
+#message{
+    margin-bottom: 10px;
+}
+
+
