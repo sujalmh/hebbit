@@ -1,10 +1,10 @@
-.contact-form{
-    height: 100%;
+#contact{
+    padding-top: 1rem;
     background-color: #FFE900;
     color: #000;
+    height: 110%;
 }
-h2{
-    margin-left: 45%;
+.contact-form .container .row h2{
     color: #000;
     font-weight: bold;
 }

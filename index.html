@@ -21,6 +21,8 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/submit.css" rel="stylesheet" />
         <link href="css/contact-form.css" rel="stylesheet" />
+        <link href="css/fadein.css" rel="stylesheet" />
+
 
 
     </head>
@@ -55,17 +57,31 @@
             </div>
         </header>
         <!-- About-->
-        <section class="page-section bg-primary align-items-center" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
-                        <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">We combine tech expertise and business intelligence to catalyze change and deliver results.
+        <section class="page-section bg-primary align-items-center" id="about" >
+            <div class="container px-lg-5" style="padding-top: 0;">
+                <div class="row gx-4 gx-lg-5 justify-content-center" style="padding-top: 0;">
+                    <div class="col-md-3 align-items-center">
+                        <img src="./assets/img/profile.png" class="rounded-circle" style="max-width:100%">
+                    </div>
+                    <div class="col-md-9 align-items-center">
+                        <h3>Name</h3>
+                        <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
-                        <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
                     </div>
                 </div>
+                
+                <div class="row gx-4 gx-lg-5 justify-content-center mt-5">
+                    <div class="col-md-9 align-items-center">
+                        <h3>Name</h3>
+                        <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div class="col-md-3 align-items-center">
+                        <img src="./assets/img/profile.png" class="rounded-circle" style="max-width:100%">
+                    </div>
+
+                </div>
+
             </div>
         </section>
         <!-- Services-->
@@ -77,7 +93,7 @@
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
                             <div class="mb-2"><i class="bi bi-clipboard-data fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Analytics & Insights</h3>
+                            <h3 classy="h4 mb-2">Analytics & Insights</h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
@@ -165,13 +181,14 @@
         <!-- Call to action-->
 
         <!--Form-->
-        <div class="contact-form " id="contact">
+        <section class="page-section contact-form" id="contact" >
             <div class="container">
-                <div class="row justify-content-center">
-                    <h2 class="mt-4">Contact Us</h2>
+                <h2 class="text-center mt-4">Contact Us</h2>
+                <hr class="divider">
+                    <div class="row justify-content-center">
                     <div class="col-6 mb-4">
-                        <form class="form was-validated">
-                            <div class="form-group mt-2">
+                        <form class="form ">
+                            <div class="form-group mt-0">
                                 <label for="emailAddress">Email address</label>
                                 <input type="email" class="form-control  mt-2" id="emailAddress" placeholder="name@example.com" required>
                                 <div class="valid-feedback">
@@ -180,7 +197,7 @@
                                 <div class="invalid-feedback">
                                     Please enter a valid email address.
                                 </div>
-                            
+
                             </div>
 
                             <div class="form-group">
@@ -190,40 +207,45 @@
                                     Looks good!
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter a email address.
+                                    Please enter your name. No numbers or special characters.
                                 </div>
 
                             </div>
 
                             <div class="form-group mt-11">
                                 <label for="number">Phone Number</label>
-                                <input class="form-control input-lg mt-2" id="number" type="tel" required>
+                                <input class="form-control input-lg mt-2" id="number" type="tel" onkeypress="return restrictAlphabets(event)" placeholder="XXXXXXXXXX" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter a valid phone number.
+                                    Please enter a valid phone number. No aplhabets or special characters.
                                 </div>
 
                             </div>
 
                             <div class="form-group mt-11">
                                 <label for="message">Message</label>
-                                <textarea class="form-control mt-2" id="message" rows="4" required></textarea>
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
+                                <textarea class="form-control mt-2" id="message" rows="4" placeholder='Enter your message here' required></textarea>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
-                            </div>
+                                <div class="invalid-feedback">
+                                    Please enter message.
+                                </div>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
 
-                            <button id="submitButton" type="submit">Submit<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill checkmark" viewBox="0 0 16 16">
+                            </div>
+                            
+
+                            <button id="submitButton" class="unchecked" type="submit" disabled>Submit<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle-fill checkmark" viewBox="0 0 16 16">
                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
                             </svg></button>
                         </form>                     
                     </div>
                 </div>            
             </div>
-        </div>
+        </section>
 
         <hr class="divider">
         <!-- Footer-->
@@ -319,7 +341,6 @@
 
         <script src="js/scripts.js"></script>
         <script src="js/submit.js"></script>
-
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

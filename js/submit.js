@@ -1,26 +1,47 @@
-var verified_status =0;
+const inputs = document.querySelectorAll('.form-control');
+var verified = 0;
+const patterns = {
+  name: /^[a-zA-Z\s]*$/,
+  emailAddress: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
+  number: /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
+  message: /^[a-zA-Z]*$/
+};
 
-let keys = document.querySelectorAll('input');
+inputs.forEach((input) => {
+  input.addEventListener('keyup', (e) => {
+    validate(e.target, patterns[e.target.attributes.id.value]);
 
-const input_fields = {
-  username: /^[a-z\d]{5,12}$/i,
-  email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
-  telephone:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/,
-}
-
-const validate = (field, regex) => {
-  regex.test(field.value) ? field.className = 'is-valid' : field.className = 'is-invalid';
-}
-
-
-$('#submitButton').click(function() {
-  element.classList.add("clicked");
-  element.classList.remove("checkmark");
+  });
 });
 
-keys.forEach(item => item.addEventListener(
-  'keyup', e => {
-    validate(e.target, input_fields[e.target.attributes.name.value])
+inputs.forEach(check)
+
+function restrictAlphabets(e) {
+  var x = e.which || e.keycode;
+  if ((x >= 48 && x <= 57))
+      return true;
+  else
+      return false;
+}
+
+
+function validate(field, regex) {
+  if (regex.test(field.value)) {
+    field.className = 'form-control is-valid';
+  } else {
+    field.className = 'form-control is-invalid';
   }
-));
+  if (field.classList.contains('is-valid')&& (field.value>0)) {
+    verified+=1;
+  }
+  else{
+    verified=0;
+  }
+  
+  if(verified>0){
+    document.querySelector('#submitButton').disabled = false;
+  }
+  console.log(verified)
+
+}
 

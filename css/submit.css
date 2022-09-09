@@ -8,18 +8,16 @@
   text-align: center;
   width: 130px;
   border-radius:40px;
-  font-size: 110%;
   transition: 0.4s;
-
 }
 
+.unchecked{
+  font-size: 110%;
+}
 .checkmark{
   display: none;
 }
 
-.clicked{
-  font-size: 0;
-}
 
 #submitButton:hover{
   background-color:  #FFE900;
@@ -34,3 +32,6 @@ footer{
   color: rgb(179, 179, 179);
 }
 
+.clicked{
+  font-size: 0;
+}
