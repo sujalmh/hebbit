@@ -1,15 +1,36 @@
 #submitButton{
   justify-self:center;
   margin-top: 10px;
-  background-color: #000;
-  color: #f4623a;
+  background-color:  #000;
+  color:  #FFE900;
+  border: 2px solid  #FFE900;
   height: 40px;
   text-align: center;
   width: 130px;
   border-radius:40px;
-  border: 2px solid #f4623a;
   font-size: 110%;
+  transition: 0.4s;
 
 }
 
+.checkmark{
+  display: none;
+}
+
+.clicked{
+  font-size: 0;
+}
+
+#submitButton:hover{
+  background-color:  #FFE900;
+  color: #000;
+  border: 2px solid #000;
+  font-size: 110%;
+  transition: 0.4s;
+}
+
+footer{
+  background-color: #000;
+  color: rgb(179, 179, 179);
+}
 

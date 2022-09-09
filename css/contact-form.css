@@ -1,10 +1,12 @@
 .contact-form{
-    background-color: #000;
-    color: #fff;
+    height: 100%;
+    background-color: #FFE900;
+    color: #000;
 }
-
 h2{
-    color: #f4623a;
+    margin-left: 45%;
+    color: #000;
+    font-weight: bold;
 }
 
 
@@ -14,6 +16,8 @@ h2{
 
 label{
     margin-bottom: 3px;
+    font-family: 'Merriweather';
+    font-weight: bold;
 }
 
 #message{
