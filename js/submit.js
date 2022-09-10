@@ -14,7 +14,6 @@ inputs.forEach((input) => {
   });
 });
 
-inputs.forEach(check)
 
 function restrictAlphabets(e) {
   var x = e.which || e.keycode;
@@ -24,6 +23,25 @@ function restrictAlphabets(e) {
       return false;
 }
 
+function sleep(ms) {
+  return new Promise(
+    resolve => setTimeout(resolve, ms)
+  );
+}
+
+
+async function onClick(){
+  var element = document.querySelector('#submitButton');
+  element.classList.remove("unchecked");
+  var element1 = document.querySelector('#checkmark');
+  element1.classList.remove("checkmark");
+  element.classList.add("clicked");
+  await sleep(5000);
+  element.classList.add("unchecked");
+  element1.classList.add("checkmark");
+  element.classList.remove("clicked");
+
+}
 
 function validate(field, regex) {
   if (regex.test(field.value)) {

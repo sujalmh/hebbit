@@ -651,6 +651,14 @@ progress {
   .container-md, .container-sm, .container {
     max-width: 720px;
   }
+  .name-odd{
+    text-align: right;
+  }
+}
+@media (max-width:768px) {
+  .small-names{
+    text-align: center;
+  }
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
@@ -11306,7 +11314,7 @@ body {
   background: #000;
   padding: 4rem 0;
   color: #fff;
-  height: 100%;
+  min-height: 100%;
 }
 
 .text-white-75 {
